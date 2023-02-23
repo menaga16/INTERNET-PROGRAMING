@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <STYLE>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+     }
+    .container{
+    width:100%;
+    height:130vh;
+    background:#141a34;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .container1{
+    width:90%;
+    max-width:600px;
+    padding:50px 30px 20px;
+    background:#fff;
+    border-radius:4px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    position:relative;
+    }
+    
+    .input{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+    position:relative;
+    }
+    .input1{
+    flex-basis:38%;
+    font-weight: bold;
+    }
+    .input2{
+    flex-basis: 68%;
+    background:transparent;
+    border:0;
+    outline:0;
+    padding:10px 0;
+    border-bottom:1px solid #999;
+    color:#333;
+    font-size:16px;
+    }
+    form button{
+    background:#141a34;
+    color:#fff;
+    border-radius:4px;
+    border:1px solid rgba(255,255,255,0.7);
+    padding:10px 40px;
+    outline:0;
+    cursor:pointer;
+    display:inline;
+    }
+   .input-group span{
+    position:absolute;
+    bottom:12px;
+    right:12px;
+    font-size: 14px;
+    color:red;
+    }
+    .input-group span i{
+    color: green;
+    }
+    .gen input{
+    margin-left: -25%;
+    }
+    .gen label{
+    margin-left:-30%;
+    font-weight: normal;
+    }
+    textarea {
+    
+    height: 100px;
+    width:350px;
+    resize: none;
+    }
+    .add #aderror{
+    left:300px;
+    }
+    .input-group select{
+    width:200px;
+    }
+    .buttons{
+    text-align: right;
+    text-indent: 10px;
+    background-color: #141a34;
+    color: #fff;
+    margin:5px;
+    }
+    </style>
+    
+   
+</head>
+<body>
+    <div class="container 1">
+        <form>
+            <div style="text-align: center; font-size: 40px;">𝗘𝗠𝗣𝗟𝗢𝗬𝗘𝗘 𝗗𝗘𝗧𝗔𝗜𝗟𝗦</div>
+            <div class="input-group">
+                <label>Employee ID:</label>
+                <input type="text" id="eid" placeholder=" first name  last name" onkeyup="id_valid()">
+                <span id="iderror"></span>
+            </div>
+            <div class="input">
+                <label>Employee Name:</label>
+                <input type="text" id="name" placeholder="Enter  name" onkeyup="name_valid()">
+                <span id="name_error"></span>
+            </div>
+            <div class="input">
+                <label>Dob :</label>
+                <input type="text" id="edob" placeholder="dd/mm/yyyy" onkeyup="date_valid()">
+                <span id="doberror"></span>
+            </div>
+            <div class="input">
+                <label id="ge" name="g">Gender: </label>
+                <div class="input-group gen">
+                <input type="radio" id="m" name="g"><label>Male</label>
+                <input type="radio" id="f" name="g"><label>Female</label>
+                </div>
+            </div>
+            <div class="input">
+                <label>Age:</label>
+                <input type="text" id="eage" placeholder="Age is calculated from dob" onkeyup="age_valid()">
+                <span id="ageerror"></span>
+            </div>
+            <div class="input1">
+                <label>Address</label>
+                <textarea rows="10" colums="50" id="ead" placeholder="Enter your address" onkeyup="add_valid()"></textarea>
+                <span id="aderror"></span>
+                <span id="adcrt"></span>
+            </div>
+            <div class="input">
+                <label>Qualification :</label>
+                <select id="quali">
+                    <option value="B.E">B.E</option>
+                    <option value="B.Tech">B.TECH</option>
+                    <option value="M.E">M.E</option>
+                    <option value="M.TECH">M.TECH</option>
+                    <option value="Ph.d">Ph.d</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="input">
+                <label>Contact Number :</label>
+                <input group="text" id="contact" onkeyup="contact_valid()">
+                <span id="contacterror"></span>
+            </div>
+            <div class="input">
+                <label>Area of Interest :</label>
+                <input group="text" id="INTEREST" onkeyup="INTEREST_valid()">
+                <span id="INTERESTerror"></span>
+            </div>
+            <div class="input">
+                <label>Year of Experience :</label>
+                <input group="text" id="EXP" onkeyup="EXP_valid()">
+                <span id="yerror"></span>
+            </div>
+            <div class="button">
+            <button onclick="submit_valid()">Submit</button>
+            <span id="submiterror"></span>
+            <button onclick="clear()">Clear</button>
+
+            <script src="FORM.js"></script>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
