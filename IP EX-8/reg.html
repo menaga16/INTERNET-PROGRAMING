@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Registration</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
-                margin-top:50px;
+                margin-top:150px;
                 
             }
             .content{
@@ -26,15 +26,14 @@
         </style>
     </head>
     <body>
-        <div class="container"><br>
-        
+        <div class="container">
+            <br>
+            <h1 style="text-align:center">REGISTRATION </h1>
         <div class="content">
-        <form action="http://localhost:8084/WebApplication1/NewServlet" method="post">
-            <center><h1>L O G I N <h1></center>
-            <label>Name :</label><input type="text" name="r1"><br><br>
-            <label>Mail Id :</label><input type="text" name="t1"><br><br>
-            <label>Password :</label><input type="password" name="r3"><br><br>
-            <center><input type="submit" ></center><br><br>
+        <form action="http://localhost:8084/WebApplication1/NewServlet" method="get">
+            <label>Mail ID:</label><input type="email" name="t1"><br><br>
+            <label>Password:</label><input type="password" name="p1"><br><br>
+            <center><input type="submit" class="bt"></center><br><br>
         </form>
         </div>
         </div>
