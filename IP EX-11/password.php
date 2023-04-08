@@ -19,10 +19,10 @@
 </head>
 <body class="bg" >
 <div class="container">
-     <h2> USER'S PASSWORD VALIDATION </h2>
+     <h2> ＵＳＥＲ'Ｓ ＰＡＳＳＷＯＲＤ ＶＡＬＩＤＡＴＩＯＮ</h2>
      <form action= "password.php" method="post">
-          Name: <input type="text" name="uname"><br><br>
-          Password: <input type="password" name="upw"><br><br>
+           ＵＳＥＲ ＮＡＭＥ <input type="text" name="uname"><br><br>
+           ＰＡＳＳＷＯＲＤ <input type="password" name="upw"><br><br>
           <input type="submit">
           <br><br><br>
      </form>
