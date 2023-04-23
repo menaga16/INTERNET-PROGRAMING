@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <code>001</code>
+    <name>iPhone 14 pro</name>
+    <description>17.00 cm (6.7″) or
+15.54 cm (6.1″)
+Super Retina XDR display</description>
+    <price>129900</price>
+    <stock>40</stock>
+  </product>
+  <product>
+    <code>002</code>
+    <name>iPhone 14</name>
+    <description>16.95 cm (6.7″) or
+15.40 cm (6.1″)
+Super Retina XDR display</description>
+    <price>79900</price>
+    <stock>30</stock>
+  </product>
+  <product>
+    <code>003</code>
+    <name>iPhone 13</name>
+    <description>15.40 cm (6.1″) or
+13.76 cm (5.4″)
+Super Retina XDR display</description>
+    <price>64900</price>
+    <stock>20</stock>
+  </product>
+  <product>
+    <code>004</code>
+    <name>iPhone</name>
+    <description> 11.94 cm (4.7") and Retina HD display</description>
+    <price>49900</price>
+    <stock>40</stock>
+  </product>
+</products>
+

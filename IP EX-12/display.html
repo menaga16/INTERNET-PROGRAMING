@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .content
+        {
+            color:white;
+
+        }
+        table
+        {
+            position: relative;
+            top: 100px; 
+            border : 1px solid white;
+            border-collapse: collapse;
+            text-align: center;
+           
+        }
+        td,th {
+            border : 1px solid white;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+    <body class="content" style="background-color: black;">
+<CENTER>
+        <br><br>
+        <h1>PRODUCT DETAILS</h1>
+        <br><br>
+        ENTER PRODUCT CODE : <input type="text" id="code">
+        <br><br><br>
+        <input type="button" value="Show" onclick="loadDoc() ">
+        <br><br><br><br>
+        <table id="demo" WIDTH="500PX">
+        <script>
+            function loadDoc() {
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function(){
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        var xmlDoc = xmlhttp.responseXML;
+                        var table="<th rowspan='6'> Product details</th>";
+                        var x = xmlDoc.getElementsByTagName("product");
+                        var k=document.getElementById("code").value;
+                        for (i = 0; i < x.length; i++)
+                        {
+                            if (k.match(x[i].getElementsByTagName('code')[0].childNodes[0].nodeValue)) {
+                           table += "<tr><th>Code</th><td>" +
+                                        x[i].getElementsByTagName("code")[0].childNodes[0].nodeValue +
+                                        "</td></tr><tr><th>Name</th><td>" +
+                                        x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                                        "</td></tr><tr><th>Description</th><td>" +
+                                        x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+                                        "</td></tr><tr><th>Price</th><td>" +
+                                        x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
+                                        "</td></tr><tr><th>Availability</th><td>"+
+                                        x[i].getElementsByTagName("stock")[0].childNodes[0].nodeValue +
+                                        "</td></tr>";
+                            }
+                        }
+                        document.getElementById("demo").innerHTML = table;
+                    }
+                }
+                xmlhttp.open("GET", "products.xml", true);
+                xmlhttp.send();
+            }
+            </script>
+</table></CENTER>
+    </body>
+</html>
